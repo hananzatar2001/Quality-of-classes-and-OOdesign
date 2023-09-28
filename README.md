@@ -1,5 +1,7 @@
 # Quality-of-classes-and-OOdesign
 Assignment # 1 Advanced topics in software development
+
+
 In this assignment, I am creating a university class and two interfaces, one for student and one for courses
 In the student and course interface I define method and then implement  
 class Students from Student interface and 
