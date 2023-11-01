@@ -50,3 +50,6 @@ This equation is present in the staff and the manger and is called upon in this 
 # Report Class
 checks the type of user (Director or Manager) and generates reports accordingly.
 
+![_Design Principles drawio](https://github.com/hananzatar2001/Advanced-topics-in-software-development/assets/90716074/21068e5c-2dd8-4222-91d0-5aa1f0ca5901)
+
+
