@@ -1,63 +1,52 @@
-# Quality-of-classes-and-OOdesign
-Assignment # 1 Advanced topics in software development
+# Assignment-2-Design-Principles
+
+The objective of this assignment is to practice the software design and apply the
+design principles in your code.
+The problem:
+You are required to design and implement a small application for a company that
+manages the following user structure:
+● Director: Has a list of Managers and Staff.
+● Manager: Has a list of Staff.
+● Staff
+All users in the system share common attributes, which include ID, name, age, hourly
+rate, and the total number of completed hours for each month.
+The application's primary tasks are to generate a set of reports, including:
+● A list of staff for each Director or Manager.
+● The required budget for each Manager or Director.
+The system should be flexible to allow for the addition of new reports. To enhance report
+generation, template stores for the reports should be created, and these template stores
+should be used to create new reports.
+Data should be stored in a database (fake DB) and retrieved from it. Your code should
+ensure that only one connection is open for each user
 
 
-In this assignment, I am creating a university class and two interfaces, one for student and one for courses
-In the student and course interface I define method and then implement  
-class Students from Student interface and 
-class Courses from Course
-and override the function
-In university class definition the object and function
-Finally in the main class 
-I create new students and new courses,
-and call function in university class
- 
- # The output :-
- 
- All available courses in the university:-
-101 - c1 - 20
-102 - advance - 20
+# Main Class
+It creates instances of Directors, Managers, and Staff, adds them to the FakeDB, generates reports, and calculates budgets.
 
-All Students registration in the university:-
-1 - hanan - hananzatar@gmail.com
-2 - yusof - yusofzatar@gmail.com
-3 - raeq - raeqzatar@gmail.com
+# User Interface
+defines common attributes and methods shared by all users.
 
-students enrolled in a specific course:-
-hanan:-101 - c1
-hanan:-102 - advance
-hanan:-101 - c1
-yusof:-101 - c1
-yusof:-102 - advance
-raeq:-102 - advance
-raeq:-101 - c1
+# calculat Interface
+We use it to achieve the Open-Closed Principle and Dependency Inversion Principle. 
 
-report of courses in which a specific student is enrolled:-
-c1:-hanan
-c1:-yusof
-c1:-raeq
-c1:-hanan
-advance:-hanan
-advance:-yusof
-advance:-raeq
+# FakeDB Class
+It is an imitation of real data pieces and is used to store and retrieve data
+and Here we used HashMap instead of ArrayList to save user data.
 
-All the reports mentioned above:-
-101 - c1 - 20
-c1:-hanan
-c1:-yusof
-c1:-raeq
-c1:-hanan
-102 - advance - 20
-advance:-hanan
-advance:-yusof
-advance:-raeq
-1 - hanan - hananzatar@gmail.com
-hanan:-101 - c1
-hanan:-102 - advance
-hanan:-101 - c1
-2 - yusof - yusofzatar@gmail.com
-yusof:-101 - c1
-yusof:-102 - advance
-3 - raeq - raeqzatar@gmail.com
-raeq:-102 - advance
-raeq:-101 - c1
+
+# Director Class
+Directors can have a list of Managers as subordinates.
+
+# Manager Class
+Managers can have a list of Staff as subordinates. 
+
+# Staff Class
+Represents a Staff member and contains attributes specific to Staff.
+
+# BudgetCalculator
+calculating the budget based on the hourly rate and completed hours
+This equation is present in the staff and the manger and is called upon in this class (hourlyrate * totalhours;).
+
+# Report Class
+checks the type of user (Director or Manager) and generates reports accordingly.
+
