@@ -43,3 +43,7 @@ We could have put them in one interface, but to adhere to the Interface Segregat
 TemperatureUnitStrategy:- interface is used to define a strategy for formatting temperatures in different units and i use it to make my code more Flexibility and Extensibility  and Encapsulation .
 
 WeatherDataObserver Interface:- interface is part of the Observer pattern Defines an interface for objects that should be notified of changes in weather data and i use it to get Loose Coupling code .
+
+Also, here I present the class diagram for the program
+![Assignment # 3 Design Pattern drawio](https://github.com/hananzatar2001/Advanced-topics-in-software-development/assets/90716074/541c34c3-c080-4e41-abdd-8f0abb003529)
+
